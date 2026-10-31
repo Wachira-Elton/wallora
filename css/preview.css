@@ -1,0 +1,98 @@
+
+.preview-dialog {
+  width: min(90%, 750px);
+  max-height: 90vh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #ffffff25;
+  border-radius: 16px;
+  background: var(--surface);
+  color: white;
+}
+
+.preview-dialog::backdrop {
+  background: #000000d9;
+}
+
+.preview-content {
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.preview-content img {
+  display: block;
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  background: #090812;
+}
+
+.close-preview {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #11101dcc;
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.preview-details {
+  padding: 20px;
+}
+
+.preview-details p {
+  margin: 10px 0;
+  color: var(--muted);
+}
+
+.preview-details a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--pink);
+  color: white;
+  text-decoration: none;
+}
+.preview-details label {
+  display: block;
+  margin: 15px 0 7px;
+  color: var(--muted);
+}
+
+#downloadSize {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ffffff25;
+  border-radius: 8px;
+  background: #29263d;
+  color: white;
+}
+
+#downloadButton {
+  width: 100%;
+  margin: 12px 0;
+  padding: 13px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(90deg, var(--pink), var(--purple));
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#downloadButton:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+#imageDetails,
+#downloadMessage {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}

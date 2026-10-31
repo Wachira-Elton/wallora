@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover beautiful wallpapers for every screen.">
+  <title>Wallora | Discover Wallpapers</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/preview.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">Wallora.</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#gallery">Explore</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>Make your screen beautiful.</h1>
+      <p>Discover wallpapers that inspire you every day.</p>
+      <a href="#gallery" class="hero-button">Explore Wallpapers</a>
+    </section>
+
+    <section class="categories" id="categories">
+      <h2>Explore Categories</h2>
+      <div class="category-list">
+        <button data-category="all" aria-pressed="true">All</button>
+        <button data-category="nature" aria-pressed="false">Nature</button>
+        <button data-category="cars" aria-pressed="false">Cars</button>
+        <button data-category="abstract" aria-pressed="false">Abstract</button>
+        <button data-category="technology" aria-pressed="false">Technology</button>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-heading">
+        <h2>Discover Wallpapers</h2>
+        <input id="searchInput" type="search"
+          placeholder="Search wallpapers..."
+          aria-label="Search wallpapers">
+      </div>
+      <p id="resultMessage" aria-live="polite"></p>
+      <div class="wallpaper-grid" id="wallpaperGrid"></div>
+    </section>
+  </main>
+
+  <dialog id="previewDialog" class="preview-dialog">
+    <div class="preview-content">
+      <button id="closePreview" class="close-preview"
+        aria-label="Close preview">&times;</button>
+      <img id="previewImage" src="" alt="">
+     <div class="preview-details">
+  <h2 id="previewTitle"></h2>
+  <p id="previewCategory"></p>
+
+  <label for="downloadSize">Choose wallpaper size</label>
+
+  <select id="downloadSize">
+    <option value="mobile">Mobile</option>
+    <option value="desktop">Desktop</option>
+    <option value="large">Large resolution</option>
+  </select>
+
+  <button id="downloadButton" type="button">
+    Download wallpaper
+  </button>
+
+  <p id="imageDetails" aria-live="polite"></p>
+  <p id="downloadMessage" aria-live="polite"></p>
+
+  <a id="originalImageLink"
+     target="_blank"
+     rel="noopener noreferrer">
+    Open original image
+  </a>
+</div>
+    </div>
+  </dialog>
+
+  <footer>
+    <p>&copy; 2026 Wallora. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
